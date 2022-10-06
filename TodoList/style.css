@@ -37,11 +37,11 @@ nav {
   height: 5vh;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-.nav-right {
+.nav__btn-wrapper {
   display: flex;
 }
 
