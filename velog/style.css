@@ -1,0 +1,345 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.root {
+  width: 102.4rem;
+  
+}
+
+header {
+  height: 6.4rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  height: 4.6rem;
+  margin-top: 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  margin-top: 3.2rem;
+}
+
+.contents {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header__logo-container {
+  width: 10rem;
+  height: 4rem;
+}
+
+.header__logo-img {
+  width: 10rem;
+  height: 4rem;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__menu__dark {
+  height: 2rem;
+  width: 2rem;
+
+  margin: 1.5rem 1rem;
+
+  
+  filter: invert(100%);
+
+}
+
+.header__menu__search {
+  height: 2.5rem;
+  width: 2.5rem;
+
+  margin: 1.5rem 1rem;
+
+  filter: invert(100%);
+
+}
+
+.header__menu__create-btn {
+  height: 3.5rem;
+  width: 10rem;
+  margin: 1.5rem 1rem;
+
+  color: white;
+  background-color: transparent;
+
+  border-radius: 2rem;
+  border: solid 0.1rem white;
+
+  font-size: 1.5rem;
+}
+
+.header__menu__profile {
+  height: 3rem;
+  width: 3rem;
+  margin: 1.5rem 0 1.5rem 1rem;
+
+}
+
+.header__menu__more-btn {
+  height: 1.5rem;
+  width: 1.5rem;
+
+  margin: 1.5rem 1rem 1.5rem 0.5rem;
+
+  filter: invert(100%);
+
+}
+
+.nav__category-container {
+  height: 100%;
+  width: 32rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.nav__trend {
+  height: 100%;
+  width: 11.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+
+  font-size: 1.8rem;
+  font-weight: 700;
+
+  border-bottom: solid 0.2rem white;
+
+}
+
+.trend-img {
+  height: 2.4rem;
+  width: 2.4rem;
+
+  margin-right: 0.8rem;
+
+  filter: invert(100%);
+}
+
+.nav__recent {
+  height: 100%;
+  width: 11.2rem;
+
+
+}
+
+.nav__recent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: lightgray;
+
+  font-size: 1.8rem;
+}
+
+.recent-img {
+  height: 2rem;
+  width: 2rem;
+
+  margin-right: 0.8rem;
+
+  filter: invert(90%);
+
+}
+
+.nav__week {
+  height: 3.2rem;
+  width: 8rem;
+
+  padding: 0 0.8rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgb(30,30,30);
+
+  border-radius: 0.4rem;
+
+  font-size: 1.4rem;
+
+  color: lightgray;
+}
+
+.week-img {
+  height: 1.5rem;
+  width: 1.5rem;
+
+  filter: invert(100%);
+
+}
+
+.nav__more-btn {
+  height: 100%;
+  width: 2.4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more-btn {
+  height: 1.8rem;
+  width: 1.8rem;
+
+  filter: invert(90%);
+
+}
+
+.section__content-card {
+  height: 37.7rem;
+  width: 32rem;
+
+  margin: 1rem;
+
+  border-radius: 0.4rem;
+
+  background-color: #1e1e1e;
+
+}
+
+.article__img-container {
+  height: 16.7rem;
+  width: 32rem;
+
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+
+overflow: hidden;
+
+}
+
+.article__img {
+  height: 32rem;
+  width: 32rem;
+}
+
+.article__wrapper {
+  height: 13.3rem;
+  
+  padding: 1.6rem;
+}
+
+.article__title {
+  height: 11.5rem;
+
+}
+
+.article__main-title {
+  margin: 0 0 0.25rem;
+  
+  font-size: 2rem;
+  line-height: 1.5;
+  
+  overflow: hidden;
+
+  color: white;
+}
+
+.article__sub-title {
+  margin: 0 0 1.5rem;
+
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+
+  color: #d9d9d9;
+
+
+}
+
+.article__date {
+  height: 1.8rem;
+
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+
+  color: #acacac;
+
+  display: flex;
+  align-items: center;
+
+}
+
+.article__author {
+  height: 2.4rem;
+
+  padding: 1rem 1.6rem;
+
+  border-top: solid 0.1rem #d9d9d9;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-wrapper {
+  height: 100%;
+  width: 10rem;
+
+  display: flex;
+  align-items: center;
+
+  color: white;
+  font-size: 1.2rem;
+  
+}
+
+.author-profile {
+  height: 2.4rem;
+  width: 2.4rem;
+
+  margin-right: 0.8rem;
+
+  border-radius: 50%;
+}
+
+.react-wrapper {
+  height: 100%;
+  width: 4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #d9d9d9;
+  font-size: 1rem;
+
+  
+}
+
+.react-img {
+  height: 1.2rem;
+  width: 1.2rem;
+
+  margin-right: 0.8rem;
+
+  filter: invert(100%);
+}
