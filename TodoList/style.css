@@ -78,7 +78,7 @@ nav {
 .section-left {
   width: 48%;
   
-  border: solid 0.3rem #a2a2a2;
+  border: solid 0.2rem #a2a2a2;
 }
 
 .section-left__title {
@@ -92,7 +92,7 @@ nav {
 
   background-color: #d9d9d9;
 
-  border-bottom: solid 0.3rem #a2a2a2;
+  border-bottom: solid 0.2rem #a2a2a2;
 }
 
 .section-left__article-wrapper {
@@ -132,7 +132,7 @@ nav {
 .section-right {
   width: 48%;
 
-  border: solid 0.3rem #a2a2a2;
+  border: solid 0.2rem #a2a2a2;
 }
 
 .section-right__title {
@@ -146,7 +146,7 @@ nav {
 
   background-color: #d9d9d9;
 
-  border-bottom: solid 0.3rem #a2a2a2;
+  border-bottom: solid 0.2rem #a2a2a2;
 }
 
 .section-right__article-wrapper {
@@ -183,7 +183,7 @@ nav {
   width: 100%;
 
   border: none;
-  border-bottom: solid 0.2rem #a2a2a2;
+  border-bottom: solid 0.1rem #a2a2a2;
 
   background-color: transparent;
   color: black;
