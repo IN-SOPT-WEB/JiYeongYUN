@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img class="header__title-image" src="./asset/To Do List (1).svg" alt="to do list">
+  </header>
+  <nav>
+    <div class="nav__btn-wrapper">
+      <button class="nav__today-btn">
+        <img class="today-btn-img" src="./asset/Today (1).svg" alt="todayBtm"/>
+      </button>
+      <button class="nav__tommorrow-btn">
+        <img class="tommorrow-btn-img" src="./asset/Tommorrow (1).svg" alt="todayBtm"/>
+      </button>
+      <button class="nav__all-btn">
+        <img class="all-btn-img" src="./asset/All (1).svg" alt="todayBtm"/>
+      </button>
+    </div>
+  </nav>
+  <main>
+    <section class="section-left">
+      <h2 class="section-left__title">
+        <img class="section-left__title-image" src="./asset/Today (1).svg"/>
+      </h2>
+      <div class="section-left__article-wrapper">
+        <ul class="section-left__input-container"></ul>
+        <article class="section-left__add">
+          <input class="section-left__add-input"/>
+          <button class="section-left__add-btn">
+            <img class="add-img" src="./asset/addIcon.png"/>
+          </button>
+        </article>
+      </div>
+    </section>
+    <section class="section-right">
+      <h2 class="section-right__title">
+        <img class="section-right__title-image" src="./asset/Tommorrow (1).svg" />
+      </h2>
+      <div class="section-right__article-wrapper">
+        <ul class="section-right__input-container">
+          <li class="input-wrapper">
+            <input class="section-right__input" placeholder="1."/>
+            <img class="delete-img" src="./asset/deleteIcon.svg" alt="delete">
+          </li>
+          <li class="input-wrapper">
+            <input class="section-right__input" placeholder="2."/>
+            <img class="delete-img" src="./asset/deleteIcon.svg" alt="delete">
+          </li>
+        </ul>
+        <article class="section-right__add">
+          <input class="section-right__add-input"/>
+          <button class="section-right__add-btn">
+            <img class="add-img" src="./asset/addIcon.png"/>
+          </button>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer>
+  </footer>
+  
+</body>
+</html>
