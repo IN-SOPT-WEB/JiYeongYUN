@@ -59,10 +59,10 @@ allBtn.addEventListener("click", (e) => {
 });
 
 function addTodoList() {
+  if (!inputTodo.value) return;
   const wrapper = document.createElement("div");
   const list = document.createElement("li");
   const addBtn = document.createElement("button");
-  const btnImg = document.createElement("img");
 
   list.innerText = inputTodo.value;
   inputTodo.value = "";
@@ -70,12 +70,18 @@ function addTodoList() {
   inputBox.appendChild(wrapper);
   wrapper.appendChild(list);
   wrapper.appendChild(addBtn);
-  // addBtn.appendChild(btnImg);
 
-  setListStyle(wrapper, list, addBtn, btnImg);
+  setListStyle(wrapper, list, addBtn);
+  deletTodo(addBtn, inputBox, wrapper);
 }
 
-function setListStyle(wrapper, list, btn, img) {
+function deletTodo(addBtn, inputBox, wrapper) {
+  addBtn.addEventListener("click", (e) => {
+    inputBox.removeChild(wrapper);
+  });
+}
+
+function setListStyle(wrapper, list, btn) {
   wrapper.style.display = "flex";
   wrapper.style.alignItems = "center";
   wrapper.style.width = "100%";
