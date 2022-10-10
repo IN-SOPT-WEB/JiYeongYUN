@@ -13,9 +13,13 @@ const allBtn = $(".nav__all-btn");
 const todaySection = $(".section-left");
 const tommorrowSection = $(".section-right");
 
-const submitBtn = $(".section-left__add-btn");
-const inputBox = $(".section-left__input-container");
-const inputTodo = $(".section-left__add-input");
+const todaySubmitBtn = $(".section-left__add-btn");
+const todayList = $(".section-left__input-container");
+const todayInput = $(".section-left__add-input");
+
+const tommorrowSubmitBtn = $(".section-right__add-btn");
+const tommorrowList = $(".section-right__input-container");
+const tommorrowInput = $(".section-right__add-input");
 
 function changeBothClassList(selected, unSelected) {
   selected.classList.remove("hidden");
@@ -58,26 +62,26 @@ allBtn.addEventListener("click", (e) => {
   currentNavState = NAV_STATE.all;
 });
 
-function addTodoList() {
-  if (!inputTodo.value) return;
+function addTodoList(listBox, inputValue) {
+  if (!inputValue.value) return;
   const wrapper = document.createElement("div");
   const list = document.createElement("li");
   const addBtn = document.createElement("button");
 
-  list.innerText = inputTodo.value;
-  inputTodo.value = "";
+  list.innerText = inputValue.value;
+  inputValue.value = "";
 
-  inputBox.appendChild(wrapper);
+  listBox.appendChild(wrapper);
   wrapper.appendChild(list);
   wrapper.appendChild(addBtn);
 
   setListStyle(wrapper, list, addBtn);
-  deletTodo(addBtn, inputBox, wrapper);
+  deletTodo(addBtn, listBox, wrapper);
 }
 
-function deletTodo(addBtn, inputBox, wrapper) {
+function deletTodo(addBtn, listBox, wrapper) {
   addBtn.addEventListener("click", (e) => {
-    inputBox.removeChild(wrapper);
+    listBox.removeChild(wrapper);
   });
 }
 
@@ -103,4 +107,10 @@ function setListStyle(wrapper, list, btn) {
   btn.style.backgroundRepeat = "no-repeat";
 }
 
-submitBtn.addEventListener("click", addTodoList);
+todaySubmitBtn.addEventListener("click", () => {
+  addTodoList(todayList, todayInput);
+  console.log(todayInput);
+});
+tommorrowSubmitBtn.addEventListener("click", () => {
+  addTodoList(tommorrowList, tommorrowInput);
+});
