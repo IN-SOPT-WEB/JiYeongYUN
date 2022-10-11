@@ -64,8 +64,8 @@ allBtn.addEventListener("click", (e) => {
 
 function addTodoList(listBox, inputValue) {
   if (!inputValue.value) return;
-  const wrapper = document.createElement("div");
-  const list = document.createElement("li");
+  const wrapper = document.createElement("li");
+  const list = document.createElement("div");
   const addBtn = document.createElement("button");
 
   list.innerText = inputValue.value;
