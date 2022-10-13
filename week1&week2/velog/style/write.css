@@ -1,5 +1,18 @@
+.header__title {
+  display: flex;
+  justify-content: center;
+}
+
+.header__title-text {
+  font-size: 3rem;
+  font-weight: 700;
+
+  color: #008f29;
+}
+
 .tag-container {
   display: flex;
+  justify-content: center;
 }
 
 input {
@@ -40,4 +53,26 @@ input:focus {
 
 .tag:focus {
   outline: none;
+}
+
+.btn-container {
+  height: 2rem;
+  
+  display: flex;
+  justify-content: center;
+
+  margin-top: 5rem;
+}
+
+.homeBtn {
+  width: 4rem;
+
+  border-radius: 1rem;
+  border: solid 0.2rem green;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color:#008f29;
 }
