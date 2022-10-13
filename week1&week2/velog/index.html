@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
   <section class="root">
@@ -16,7 +16,7 @@
       <div class="header__menu">
         <img class="header__menu__dark" src="./asset/night.png" alt="dark-mode">
         <img class="header__menu__search" src="./asset/search.png" alt="search">
-        <button class="header__menu__create-btn">새 글 작성</button>
+        <a class="header__menu__create-btn" href="./write.html">새 글 작성</a>
         <img class="header__menu__profile" src="./asset/man.png" alt="profile">
         <img class="header__menu__more-btn" src="./asset/more.png" alt="more">
       </div>
@@ -33,9 +33,15 @@
         </article>
         <article class="nav__week">
           <p class="week-text">이번 주</p>
-          <img class="week-img" src="./asset/more.png">
+          <button class="week-btn">
         </article>
       </div>
+      <ul class="dropdown hidden">
+        <li class="dropdown-date">오늘</li>
+        <li class="dropdown-date">이번 주</li>
+        <li class="dropdown-date">이번 달</li>
+        <li class="dropdown-date">올해</li>
+      </ul>
       <div class="nav__more-btn">
         <img class="more-btn" src="./asset/more2.png" alt="more2">
       </div>
@@ -301,5 +307,6 @@
       </section>
     </main>
   </section>
+  <script src="./src/main.js"></script>
 </body>
 </html>
