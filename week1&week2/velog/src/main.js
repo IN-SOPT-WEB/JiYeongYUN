@@ -10,6 +10,10 @@ const root = $(".root");
 const cardBox = $(".contents-container");
 const card = $$(".section__content-card");
 
+const leftBtn = $(".left-btn");
+const rightBtn = $(".right-btn");
+const slideBox = $(".slider-wrapper");
+
 let isDropdownOpen = false;
 
 //DropDown
@@ -74,4 +78,25 @@ card.forEach((item) => {
   item.addEventListener("click", () => {
     createModal(item);
   });
+});
+
+//Slider
+function moveSlider(start, end) {
+  slideBox.animate(
+    {
+      transform: [`translateX(${start}rem)`, `translateX(${end}rem)`],
+    },
+    {
+      duration: 500,
+      fill: "forwards",
+    }
+  );
+}
+
+rightBtn.addEventListener("click", () => {
+  moveSlider(30, 0);
+});
+
+leftBtn.addEventListener("click", () => {
+  moveSlider(0, 30);
 });
