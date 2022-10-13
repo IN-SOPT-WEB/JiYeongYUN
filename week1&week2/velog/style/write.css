@@ -1,0 +1,43 @@
+.tag-container {
+  display: flex;
+}
+
+input {
+  height: 2.5rem;
+  width: 5rem;
+
+  background-color: rgb(237, 237, 237);
+
+  font-size: 1rem;
+
+  border: solid 0.2rem #008f29;
+  border-radius: 1.5rem;
+
+  text-align: center;
+}
+
+.tag {
+  height: 2.5rem;
+  width: 5rem;
+
+  background-color: #008f29;
+
+  font-size: 1rem;
+  color: white;
+
+  border: solid 0.2rem rgb(237, 237, 237);
+  border-radius: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+input:focus {
+  outline: none;
+
+}
+
+.tag:focus {
+  outline: none;
+}
