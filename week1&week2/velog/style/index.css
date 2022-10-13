@@ -200,7 +200,7 @@ main {
 
   filter: invert(100%);
 
-  background-image: url("./asset/more.png");
+  background-image: url("../asset/more.png");
   background-size: contain;
   background-color: transparent;
 
@@ -242,12 +242,6 @@ main {
   cursor: pointer;
 }
 
-.hidden {
-  height: 0;
-  width: 0;
-  overflow: hidden;
-}
-
 .nav__more-btn {
   height: 100%;
   width: 2.4rem;
@@ -273,6 +267,33 @@ main {
   border-radius: 0.4rem;
 
   background-color: #1e1e1e;
+  
+  cursor: pointer;  
+
+}
+
+@keyframes shake{
+  0%, 50%, 100%{
+    transform: rotate(0deg);
+	}
+  75% {
+    transform: rotate(8deg);
+  }
+  25% {
+    transform: rotate(-8deg);
+  }
+}
+
+.section__content-card:hover {
+  animation: shake 0.2s linear;
+}
+
+.modal {
+  animation: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
 }
 
@@ -393,4 +414,41 @@ overflow: hidden;
   margin-right: 0.8rem;
 
   filter: invert(100%);
+}
+
+.hidden {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.modal-bg {
+  height: 100vh;
+  width: 100%;
+
+  position: fixed;
+  top:0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+  background:black;
+}
+
+.closeBtn {
+  position: absolute;
+
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 2.5rem;
+  width: 2.5rem;
+
+  border-radius: 1.5rem;
+  border: none;
+
+  background-image: url("../../TodoList/asset/deleteIcon.svg");
+  background-size: contain;
+  
+  cursor: pointer;
 }
