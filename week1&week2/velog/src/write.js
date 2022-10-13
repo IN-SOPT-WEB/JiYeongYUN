@@ -1,8 +1,11 @@
 const ENTER = 13;
 
-const inputTag = document.querySelector(".tag-input");
 const tagBox = document.querySelector(".tag-container");
 let tagSet = new Set();
+
+function saveLocalStorageData(item) {
+  localStorage.setItem("tagSet", JSON.stringify([...item]));
+}
 
 function checkSet(element, value) {
   if (tagSet.has(value)) {
@@ -13,6 +16,7 @@ function checkSet(element, value) {
   createTag(value);
   createNextInput();
   deletInput(element);
+  saveLocalStorageData(tagSet);
 }
 
 function handleEnter(element) {
@@ -46,4 +50,17 @@ function createTag(text) {
   deleteTag(tag);
 }
 
-handleEnter(inputTag);
+function init() {
+  if (localStorage.length !== 0) {
+    getLocalStroageData();
+  }
+  createNextInput();
+}
+
+function getLocalStroageData() {
+  const remainData = JSON.parse(localStorage.getItem("tagSet"));
+  remainData.forEach((item) => {
+    createTag(item);
+  });
+}
+init();
