@@ -297,6 +297,50 @@ main {
 
 }
 
+.slider-box {
+  width: 102.4rem;
+
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  display: flex;
+}
+
+.right-btn {
+  position: absolute;
+
+  background-color: transparent;
+  background-image: url("../asset/rightArrow.png");
+
+  background-size: contain;
+
+  top: 110%;
+  right: 5%;
+
+  border: none;
+
+  height: 4rem;
+  width: 4rem;
+}
+
+.left-btn {
+  position: absolute;
+
+  background-color: transparent;
+  background-image: url("../asset/leftArrow.png");
+
+  background-size: contain;
+
+  top: 110%;
+  left: 5%;
+
+  border: none;
+
+  height: 4rem;
+  width: 4rem;
+}
+
 .article__img-container {
   height: 16.7rem;
   width: 32rem;
