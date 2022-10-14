@@ -242,6 +242,12 @@ main {
   cursor: pointer;
 }
 
+.selected {
+  color : navy;
+
+  font-weight: 700;
+}
+
 .nav__more-btn {
   height: 100%;
   width: 2.4rem;

@@ -4,6 +4,8 @@ const $$ = (selector) => document.querySelectorAll(selector);
 const dropdownBox = $(".dropdown");
 const dropdownBtn = $(".week-btn");
 const dropdownText = $(".week-text");
+let isDropdownOpen = false;
+let currentDate;
 
 const body = $("body");
 const root = $(".root");
@@ -13,8 +15,6 @@ const card = $$(".section__content-card");
 const leftBtn = $(".left-btn");
 const rightBtn = $(".right-btn");
 const slideBox = $(".slider-wrapper");
-
-let isDropdownOpen = false;
 
 //DropDown
 function handleDropdown() {
@@ -28,14 +28,19 @@ function handleDropdown() {
 
 function changeView(e) {
   const currentText = e.target.innerText;
+
   dropdownText.innerText = currentText;
+
   changeDropdownStyle(e.target);
   handleDropdown();
 }
 
 function changeDropdownStyle(element) {
-  element.style.color = "navy";
-  element.style.fontWeight = "700";
+  if (currentDate != undefined) {
+    currentDate.classList.remove("selected");
+  }
+  currentDate = element;
+  element.classList.add("selected");
 }
 
 dropdownBtn.addEventListener("click", handleDropdown);
@@ -72,6 +77,8 @@ function closeModal(element) {
   element.addEventListener("click", () => {
     modalBox.remove();
   });
+
+  body.style.overflow = null;
 }
 
 card.forEach((item) => {
