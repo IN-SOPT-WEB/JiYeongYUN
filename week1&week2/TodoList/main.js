@@ -33,37 +33,9 @@ function changeSingeClassList(selected, unSelected) {
   unSelected.classList.add("hidden");
 }
 
-todayBtn.addEventListener("click", (e) => {
-  if (currentNavState === NAV_STATE.tommorrow) {
-    changeBothClassList(todaySection, tommorrowSection);
-  } else if (currentNavState === NAV_STATE.all) {
-    changeSingeClassList(todaySection, tommorrowSection);
-  }
-  currentNavState = NAV_STATE.today;
-});
-
-tommorrowBtn.addEventListener("click", (e) => {
-  if (currentNavState === NAV_STATE.today) {
-    changeBothClassList(tommorrowSection, todaySection);
-  } else if (currentNavState === NAV_STATE.all) {
-    changeSingeClassList(tommorrowSection, todaySection);
-  }
-  currentNavState = NAV_STATE.tommorrow;
-});
-
-allBtn.addEventListener("click", (e) => {
-  if (currentNavState === NAV_STATE.today) {
-    todaySection.classList.remove("all");
-    tommorrowSection.classList.remove("hidden");
-  } else if (currentNavState === NAV_STATE.tommorrow) {
-    todaySection.classList.remove("hidden");
-    tommorrowSection.classList.remove("all");
-  }
-  currentNavState = NAV_STATE.all;
-});
-
 function addTodoList(listBox, inputValue) {
   if (!inputValue.value) return;
+
   const wrapper = document.createElement("li");
   const list = document.createElement("div");
   const addBtn = document.createElement("button");
@@ -86,26 +58,41 @@ function deletTodo(addBtn, listBox, wrapper) {
 }
 
 function setListStyle(wrapper, list, btn) {
-  wrapper.style.display = "flex";
-  wrapper.style.alignItems = "center";
-  wrapper.style.width = "100%";
-
-  list.style.height = "4rem";
-  list.style.width = "100%";
-  list.style.borderBottom = "0.1rem solid #a2a2a2";
-  list.style.fontSize = "2rem";
-  list.style.padding = "0 1rem";
-  list.style.display = "flex";
-  list.style.alignItems = "center";
-
-  btn.style.height = "20%";
-  btn.style.border = "none";
-  btn.style.backgroundColor = "transparent";
-  btn.style.cursor = "pointer";
-  btn.style.backgroundImage = "url(./asset/deleteIcon.svg)";
-  btn.style.backgroundSize = "contain";
-  btn.style.backgroundRepeat = "no-repeat";
+  wrapper.classList.add("section__list-wrapper");
+  list.classList.add("section__list");
+  btn.classList.add("deleteBtn");
 }
+
+todayBtn.addEventListener("click", (e) => {
+  if (currentNavState === NAV_STATE.tommorrow) {
+    changeBothClassList(todaySection, tommorrowSection);
+  } else if (currentNavState === NAV_STATE.all) {
+    changeSingeClassList(todaySection, tommorrowSection);
+  }
+
+  currentNavState = NAV_STATE.today;
+});
+
+tommorrowBtn.addEventListener("click", (e) => {
+  if (currentNavState === NAV_STATE.today) {
+    changeBothClassList(tommorrowSection, todaySection);
+  } else if (currentNavState === NAV_STATE.all) {
+    changeSingeClassList(tommorrowSection, todaySection);
+  }
+  currentNavState = NAV_STATE.tommorrow;
+});
+
+allBtn.addEventListener("click", (e) => {
+  if (currentNavState === NAV_STATE.today) {
+    todaySection.classList.remove("all");
+    tommorrowSection.classList.remove("hidden");
+  } else if (currentNavState === NAV_STATE.tommorrow) {
+    todaySection.classList.remove("hidden");
+    tommorrowSection.classList.remove("all");
+  }
+
+  currentNavState = NAV_STATE.all;
+});
 
 todaySubmitBtn.addEventListener("click", () => {
   addTodoList(todayList, todayInput);

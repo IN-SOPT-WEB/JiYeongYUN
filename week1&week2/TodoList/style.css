@@ -116,19 +116,40 @@ nav {
   align-items: center;
 }
 
-.section-left__input {
+.section__list-wrapper {
   width: 100%;
 
+  display: flex;
+  align-items: center;
+  
+}
+
+.section__list {
   height: 4rem;
+  width: 100%;
+
+  border-bottom: solid 0.1rem #a2a2a2;
+
+  font-size: 2rem;
+  
+  padding: 0 1rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.deleteBtn {
+  height: 20%;
 
   border: none;
-  border-bottom: solid 0.2rem #a2a2a2;
 
   background-color: transparent;
-  color: black;
-  font-size: 2rem;
+  background-image: url("./asset/deleteIcon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 
-  padding: 0 1rem;
+  cursor: pointer
+  
 }
 
 .section-right {
@@ -165,13 +186,6 @@ nav {
 
 }
 
-.input-wrapper {
-  width: 100%;
-
-  display: flex;
-  align-items: center;
-}
-
 .section-right__input-container {
   width: 100%;
 
@@ -179,27 +193,6 @@ nav {
   flex-direction: column;
   align-items: center;
 
-}
-
-.section-right__input {
-  height: 4rem;
-
-  width: 100%;
-
-  border: none;
-  border-bottom: 0.1rem solid #a2a2a2;
-
-  background-color: transparent;
-  color: black;
-  font-size: 2rem;
-
-  padding: 0 1rem;
-}
-
-.delete-img {
-  height: 20%;
-
-  margin-left: 1rem;
 }
 
 .section-left__add {
