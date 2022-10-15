@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
   <section class="root">
@@ -16,7 +16,7 @@
       <div class="header__menu">
         <img class="header__menu__dark" src="./asset/night.png" alt="dark-mode">
         <img class="header__menu__search" src="./asset/search.png" alt="search">
-        <button class="header__menu__create-btn">새 글 작성</button>
+        <a class="header__menu__create-btn" href="./write.html">새 글 작성</a>
         <img class="header__menu__profile" src="./asset/man.png" alt="profile">
         <img class="header__menu__more-btn" src="./asset/more.png" alt="more">
       </div>
@@ -33,14 +33,20 @@
         </article>
         <article class="nav__week">
           <p class="week-text">이번 주</p>
-          <img class="week-img" src="./asset/more.png">
+          <button class="week-btn">
         </article>
       </div>
+      <ul class="dropdown hidden">
+        <li class="dropdown-date">오늘</li>
+        <li class="dropdown-date">이번 주</li>
+        <li class="dropdown-date">이번 달</li>
+        <li class="dropdown-date">올해</li>
+      </ul>
       <div class="nav__more-btn">
         <img class="more-btn" src="./asset/more2.png" alt="more2">
       </div>
     </nav>
-    <main>
+    <main class="contents-container">
       <section class="contents">
         <article class="section__content-card">
           <div class="article__img-container">
@@ -127,91 +133,151 @@
           </div>
         </article>
       </section>
-      <section class="contents">
-        <article class="section__content-card">
-          <div class="article__img-container">
-            <img class="article__img" src="./asset/Exploring Space.jpeg" alt="articleImg">
-          </div>
-          <div class="article__discription-container">
-            <div class="article__wrapper">
-              <div class="article__title">
-                <h1 class="article__main-title">Space Exploring🚀</h1>
-                <h2 class="article__sub-title">오지게 큰 달 사진이에요.</h2>
+      <section class="contents slider-box">
+        <div class="slider-wrapper">
+          <article class="section__content-card">
+            <div class="article__img-container">
+              <img class="article__img" src="./asset/Exploring Space.jpeg" alt="articleImg">
+            </div>
+            <div class="article__discription-container">
+              <div class="article__wrapper">
+                <div class="article__title">
+                  <h1 class="article__main-title">Space Exploring🚀</h1>
+                  <h2 class="article__sub-title">오지게 큰 달 사진이에요.</h2>
+                </div>
+                <div class="article__date">
+                  <strong class="date-text">2020년 9월 2일</strong>
+                  <strong class="division"> . </strong>
+                  <strong class="review-text">16개의 댓글</strong>
+                </div>
               </div>
-              <div class="article__date">
-                <strong class="date-text">2020년 9월 2일</strong>
-                <strong class="division"> . </strong>
-                <strong class="review-text">16개의 댓글</strong>
+              <div class="article__author">
+                <div class="author-wrapper">
+                  <img class="author-profile" src="./asset/nave.jpeg" alt="profile">
+                  <strong class="author-name">by Nave</strong>
+                </div>
+                <div class="react-wrapper">
+                  <img class="react-img" src="./asset/like.png" alt="like">
+                  <strong class="react-cnt">106</strong>
+                </div>
               </div>
             </div>
-            <div class="article__author">
-              <div class="author-wrapper">
-                <img class="author-profile" src="./asset/nave.jpeg" alt="profile">
-                <strong class="author-name">by Nave</strong>
+          </article>
+          <article class="section__content-card">
+            <div class="article__img-container">
+              <img class="article__img" src="./asset/Exploring Space.jpeg" alt="articleImg">
+            </div>
+            <div class="article__discription-container">
+              <div class="article__wrapper">
+                <div class="article__title">
+                  <h1 class="article__main-title">Space Exploring🚀</h1>
+                  <h2 class="article__sub-title">오지게 큰 달 사진이에요.</h2>
+                </div>
+                <div class="article__date">
+                  <strong class="date-text">2020년 9월 2일</strong>
+                  <strong class="division"> . </strong>
+                  <strong class="review-text">16개의 댓글</strong>
+                </div>
               </div>
-              <div class="react-wrapper">
-                <img class="react-img" src="./asset/like.png" alt="like">
-                <strong class="react-cnt">106</strong>
+              <div class="article__author">
+                <div class="author-wrapper">
+                  <img class="author-profile" src="./asset/nave.jpeg" alt="profile">
+                  <strong class="author-name">by Nave</strong>
+                </div>
+                <div class="react-wrapper">
+                  <img class="react-img" src="./asset/like.png" alt="like">
+                  <strong class="react-cnt">106</strong>
+                </div>
               </div>
             </div>
-          </div>
-        </article>
-        <article class="section__content-card">
-          <div class="article__img-container">
-            <img class="article__img" src="./asset/Exploring Space.jpeg" alt="articleImg">
-          </div>
-          <div class="article__discription-container">
-            <div class="article__wrapper">
-              <div class="article__title">
-                <h1 class="article__main-title">Space Exploring🚀</h1>
-                <h2 class="article__sub-title">오지게 큰 달 사진이에요.</h2>
+          </article>
+          <article class="section__content-card">
+            <div class="article__img-container">
+              <img class="article__img" src="./asset/Exploring Space.jpeg" alt="articleImg">
+            </div>
+            <div class="article__discription-container">
+              <div class="article__wrapper">
+                <div class="article__title">
+                  <h1 class="article__main-title">Space Exploring🚀</h1>
+                  <h2 class="article__sub-title">오지게 큰 달 사진이에요.</h2>
+                </div>
+                <div class="article__date">
+                  <strong class="date-text">2020년 9월 2일</strong>
+                  <strong class="division"> . </strong>
+                  <strong class="review-text">16개의 댓글</strong>
+                </div>
               </div>
-              <div class="article__date">
-                <strong class="date-text">2020년 9월 2일</strong>
-                <strong class="division"> . </strong>
-                <strong class="review-text">16개의 댓글</strong>
+              <div class="article__author">
+                <div class="author-wrapper">
+                  <img class="author-profile" src="./asset/nave.jpeg" alt="profile">
+                  <strong class="author-name">by Nave</strong>
+                </div>
+                <div class="react-wrapper">
+                  <img class="react-img" src="./asset/like.png" alt="like">
+                  <strong class="react-cnt">106</strong>
+                </div>
               </div>
             </div>
-            <div class="article__author">
-              <div class="author-wrapper">
-                <img class="author-profile" src="./asset/nave.jpeg" alt="profile">
-                <strong class="author-name">by Nave</strong>
+          </article>
+          <article class="section__content-card">
+            <div class="article__img-container">
+              <img class="article__img" src="./asset/Exploring Space.jpeg" alt="articleImg">
+            </div>
+            <div class="article__discription-container">
+              <div class="article__wrapper">
+                <div class="article__title">
+                  <h1 class="article__main-title">Space Exploring🚀</h1>
+                  <h2 class="article__sub-title">오지게 큰 달 사진이에요.</h2>
+                </div>
+                <div class="article__date">
+                  <strong class="date-text">2020년 9월 2일</strong>
+                  <strong class="division"> . </strong>
+                  <strong class="review-text">16개의 댓글</strong>
+                </div>
               </div>
-              <div class="react-wrapper">
-                <img class="react-img" src="./asset/like.png" alt="like">
-                <strong class="react-cnt">106</strong>
+              <div class="article__author">
+                <div class="author-wrapper">
+                  <img class="author-profile" src="./asset/nave.jpeg" alt="profile">
+                  <strong class="author-name">by Nave</strong>
+                </div>
+                <div class="react-wrapper">
+                  <img class="react-img" src="./asset/like.png" alt="like">
+                  <strong class="react-cnt">106</strong>
+                </div>
               </div>
             </div>
-          </div>
-        </article>
-        <article class="section__content-card">
-          <div class="article__img-container">
-            <img class="article__img" src="./asset/Exploring Space.jpeg" alt="articleImg">
-          </div>
-          <div class="article__discription-container">
-            <div class="article__wrapper">
-              <div class="article__title">
-                <h1 class="article__main-title">Space Exploring🚀</h1>
-                <h2 class="article__sub-title">오지게 큰 달 사진이에요.</h2>
+          </article>
+          <article class="section__content-card">
+            <div class="article__img-container">
+              <img class="article__img" src="./asset/Exploring Space.jpeg" alt="articleImg">
+            </div>
+            <div class="article__discription-container">
+              <div class="article__wrapper">
+                <div class="article__title">
+                  <h1 class="article__main-title">Space Exploring🚀</h1>
+                  <h2 class="article__sub-title">오지게 큰 달 사진이에요.</h2>
+                </div>
+                <div class="article__date">
+                  <strong class="date-text">2020년 9월 2일</strong>
+                  <strong class="division"> . </strong>
+                  <strong class="review-text">16개의 댓글</strong>
+                </div>
               </div>
-              <div class="article__date">
-                <strong class="date-text">2020년 9월 2일</strong>
-                <strong class="division"> . </strong>
-                <strong class="review-text">16개의 댓글</strong>
+              <div class="article__author">
+                <div class="author-wrapper">
+                  <img class="author-profile" src="./asset/nave.jpeg" alt="profile">
+                  <strong class="author-name">by Nave</strong>
+                </div>
+                <div class="react-wrapper">
+                  <img class="react-img" src="./asset/like.png" alt="like">
+                  <strong class="react-cnt">106</strong>
+                </div>
               </div>
             </div>
-            <div class="article__author">
-              <div class="author-wrapper">
-                <img class="author-profile" src="./asset/nave.jpeg" alt="profile">
-                <strong class="author-name">by Nave</strong>
-              </div>
-              <div class="react-wrapper">
-                <img class="react-img" src="./asset/like.png" alt="like">
-                <strong class="react-cnt">106</strong>
-              </div>
-            </div>
-          </div>
-        </article>
+          </article>
+        </div>
+        <button class="right-btn"></button>
+        <button class="left-btn"></button>
       </section>
       <section class="contents">
         <article class="section__content-card">
@@ -300,6 +366,8 @@
         </article>
       </section>
     </main>
+    </section>
   </section>
+  <script src="./src/main.js"></script>
 </body>
 </html>
