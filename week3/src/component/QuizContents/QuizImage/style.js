@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const St = {
+  Wrapper: styled.div`
+    display: flex;
+  `,
+
   ImageContainer: styled.div`
     height: 25rem;
     width: 25rem;
@@ -16,16 +20,15 @@ export const St = {
 
   OptionWrapper: styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 
-    width: 100%;
-    height: 3rem;
+    /* width: 100%;
+    height: 3rem; */
 
     padding: 0;
     margin: 0;
-
-    background-color: pink;
   `,
 
   OptionItem: styled.button`
@@ -33,18 +36,18 @@ export const St = {
 
     /* height: 1.5rem; */
 
-    margin: 0 1rem;
-    padding: 0 1rem;
+    margin: 0.5rem 1rem;
+    padding: 0.5rem 1rem;
 
-    background-color: pink;
-    color: white;
+    color: black;
+    background-color: white;
 
-    font-size: 0.8rem;
+    font-size: 1rem;
 
     display: flex;
     align-items: center;
 
-    border: solid 0.2rem white;
+    border: solid 0.2rem red;
 
     cursor: pointer;
   `,

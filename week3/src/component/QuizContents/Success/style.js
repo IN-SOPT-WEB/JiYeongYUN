@@ -5,4 +5,10 @@ export const St = {
     height: 30rem;
     width: 30rem;
   `,
+
+  SuccessText: styled.div`
+    color: white;
+
+    font-size: 3rem;
+  `,
 };
