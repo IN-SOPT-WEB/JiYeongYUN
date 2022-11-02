@@ -13,7 +13,7 @@ export default function QuizContents() {
   const [stage, setStage] = useState(0);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(true);
 
   const checkAnswer = (selected) => {};
 
@@ -23,7 +23,10 @@ export default function QuizContents() {
         setIsSuccess(true);
       } else {
         setStage((prev) => prev + 1);
+        setIsOpen(false);
       }
+    } else {
+      setIsOpen(true);
     }
   };
 
@@ -39,7 +42,7 @@ export default function QuizContents() {
         <QuizImage stage={stage} clickOption={clickOption} />
         <Footer retryGame={retryGame} />
       </ContentsWrapper>
-      <Modal isOpen={isOpen} />
+      {isOpen && <Modal isOpen={isOpen} setIsOpen={setIsOpen} />}
     </>
   ) : (
     <>
@@ -47,7 +50,6 @@ export default function QuizContents() {
         <Success />
         <Footer retryGame={retryGame} />
       </ContentsWrapper>
-      <Modal />
     </>
   );
 }
