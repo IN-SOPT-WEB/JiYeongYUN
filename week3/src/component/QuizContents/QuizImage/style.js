@@ -1,5 +1,17 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
+export const vibration = keyframes`
+0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+
+  }
+`;
 export const St = {
   Wrapper: styled.div`
     display: flex;
@@ -50,5 +62,15 @@ export const St = {
     border: solid 0.2rem red;
 
     cursor: pointer;
+  `,
+
+  SnoopyImage: styled.img`
+    height: 10rem;
+    width: 10rem;
+
+    margin-top: 10rem;
+
+    animation: ${(props) => (props.isCorrect ? vibration : "none")};
+    animation-duration: 1s;
   `,
 };

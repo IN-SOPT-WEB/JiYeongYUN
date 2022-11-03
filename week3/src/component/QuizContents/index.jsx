@@ -2,10 +2,9 @@ import styled from "styled-components";
 import MyScore from "./MyScore";
 import QuizImage from "./QuizImage";
 import Footer from "./Footer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ImageList } from "../../core/imageList";
 import Success from "./Success";
-import snoopy from "../../images/snoopy.png";
 import Modal from "../Modal";
 
 export default function QuizContents() {
@@ -13,7 +12,7 @@ export default function QuizContents() {
   const [stage, setStage] = useState(0);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(true);
+  const [isCorrect, setIsCorrect] = useState(false);
 
   const checkAnswer = (selected) => {};
 
@@ -23,10 +22,13 @@ export default function QuizContents() {
         setIsSuccess(true);
       } else {
         setStage((prev) => prev + 1);
-        setIsOpen(false);
+        setIsCorrect(true);
       }
     } else {
       setIsOpen(true);
+      if (isCorrect === true) {
+        setIsCorrect(false);
+      }
     }
   };
 
@@ -35,11 +37,17 @@ export default function QuizContents() {
     setIsSuccess(false);
   };
 
+  console.log(isCorrect);
+
   return !isSuccess ? (
     <>
       <ContentsWrapper>
         <MyScore stage={stage} />
-        <QuizImage stage={stage} clickOption={clickOption} />
+        <QuizImage
+          stage={stage}
+          clickOption={clickOption}
+          isCorrect={isCorrect}
+        />
         <Footer retryGame={retryGame} />
       </ContentsWrapper>
       {isOpen && <Modal isOpen={isOpen} setIsOpen={setIsOpen} />}
@@ -59,7 +67,4 @@ const ContentsWrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  background-image: url(${snoopy});
-  background-size: 20%;
 `;

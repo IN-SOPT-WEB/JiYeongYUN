@@ -1,5 +1,6 @@
 import styled from "styled-components";
-
+import errorImage from "../../images/errorImg.png";
+import { keyframes } from "styled-components";
 export const St = {
   ModalContainer: styled.section`
     position: absolute;
@@ -18,7 +19,10 @@ export const St = {
     height: 25rem;
     width: 25rem;
 
-    background-color: beige;
+    background-image: url(${errorImage});
+    background-position: center;
+
+    background-repeat: no-repeat;
 
     position: absolute;
 

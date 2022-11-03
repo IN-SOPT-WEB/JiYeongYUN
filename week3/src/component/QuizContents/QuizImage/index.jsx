@@ -1,9 +1,10 @@
 import { St } from "./style";
 import { ImageList, optionList } from "../../../core/imageList";
 import { useEffect } from "react";
+import snoopyImg from "../../../images/snoopy.png";
 
 export default function QuizImage(props) {
-  let { stage, clickOption } = props;
+  let { stage, clickOption, isCorrect } = props;
 
   useEffect(() => {
     optionList.sort(() => Math.random() - 0.5);
@@ -11,6 +12,7 @@ export default function QuizImage(props) {
 
   return (
     <St.Wrapper>
+      <St.SnoopyImage src={snoopyImg} isCorrect={isCorrect}></St.SnoopyImage>
       <St.ImageContainer>
         <St.Image src={ImageList[stage].img} />
       </St.ImageContainer>
@@ -23,6 +25,7 @@ export default function QuizImage(props) {
           );
         })}
       </St.OptionWrapper>
+      <St.SnoopyImage src={snoopyImg} isCorrect={isCorrect}></St.SnoopyImage>
     </St.Wrapper>
   );
 }
