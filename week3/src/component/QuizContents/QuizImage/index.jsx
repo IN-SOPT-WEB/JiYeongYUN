@@ -1,14 +1,9 @@
 import { St } from "./style";
-import { ImageList, optionList } from "../../../core/imageList";
-import { useEffect } from "react";
+import { ImageList } from "../../../core/imageList";
 import snoopyImg from "../../../images/snoopy.png";
 
 export default function QuizImage(props) {
-  let { stage, clickOption, isCorrect } = props;
-
-  useEffect(() => {
-    optionList.sort(() => Math.random() - 0.5);
-  }, [stage]);
+  let { stage, clickOption, isCorrect, optionList } = props;
 
   return (
     <St.Wrapper>
