@@ -7,7 +7,7 @@ export const St = {
   `,
 
   SuccessText: styled.div`
-    color: white;
+    color: black;
 
     font-size: 3rem;
   `,
