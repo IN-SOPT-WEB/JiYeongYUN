@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { St } from "./style";
 
 export default function Modal(props) {
