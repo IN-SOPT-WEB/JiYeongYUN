@@ -8,6 +8,7 @@ const ContentsContainer = styled.section`
   flex-grow: 1;
 
   margin-top: 1rem;
+  padding-bottom: 2rem;
 `;
 
 const ContentsBox = styled.article`
@@ -23,16 +24,12 @@ const ContentsBox = styled.article`
   border-radius: 3rem;
 `;
 
-const ProfileImg = styled.div`
+const ProfileImg = styled.img`
   height: 10rem;
   width: 10rem;
 
   border-radius: 10rem;
-
-  background-image: url(${gitLogo});
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: white;
+  border: solid 0.2rem white;
 `;
 
 const UserName = styled.article`
@@ -40,12 +37,16 @@ const UserName = styled.article`
   color: white;
 `;
 
-const UserUrl = styled.p`
+const UserUrl = styled.a`
   color: white;
   margin: 0;
 
   border: solid 0.1rem white;
   border-radius: 2rem;
+
+  text-decoration: none;
+
+  padding: 0 1rem;
 `;
 
 const UserInfoBox = styled.div`
@@ -111,7 +112,7 @@ const BtnContainer = styled.div`
   margin-top: 1rem;
 `;
 
-const GoRepoBtn = styled.button`
+const GoRepoBtn = styled.a`
   height: 3rem;
   width: 100%;
 
@@ -121,6 +122,12 @@ const GoRepoBtn = styled.button`
   background-color: white;
 
   font-size: 2rem;
+  text-align: center;
+  color: black;
+
+  padding-top: 0.5rem;
+
+  text-decoration: none;
 `;
 const St = {
   ContentsContainer,

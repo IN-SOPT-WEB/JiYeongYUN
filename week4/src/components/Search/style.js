@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const SearchBarContainer = styled.section`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
@@ -38,6 +39,32 @@ const SearchInput = styled.input`
   }
 `;
 
-const St = { SearchBarContainer, SearchBar, SearchIcon, SearchInput };
+const HistoryBox = styled.ul`
+  background-color: white;
+  width: 35%;
+
+  margin: 0;
+  padding: 0;
+
+  border: solid 0.1rem lightgray;
+  border-top: none;
+`;
+
+const HistoryList = styled.li`
+  height: 2rem;
+  list-style: none;
+  padding: 0.5rem 0 0 1rem;
+
+  border-top: solid 0.1rem lightgray;
+`;
+
+const St = {
+  SearchBarContainer,
+  SearchBar,
+  SearchIcon,
+  SearchInput,
+  HistoryBox,
+  HistoryList,
+};
 
 export default St;
