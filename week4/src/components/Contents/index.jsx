@@ -1,28 +1,35 @@
 import St from "./style";
 
-export default function Contents() {
+export default function Contents({ data }) {
+  const userInfo = data[0];
+  const userStar = data[1];
+
   return (
     <St.ContentsContainer>
       <St.ContentsBox>
-        <St.ProfileImg></St.ProfileImg>
-        <St.UserName>yunjiyeong / NaveOWO</St.UserName>
-        <St.UserUrl>🕸where?🕸</St.UserUrl>
+        <St.ProfileImg src={userInfo.avatar_url}></St.ProfileImg>
+        <St.UserName>
+          {userInfo.name} / {userInfo.login}
+        </St.UserName>
+        <St.UserUrl href={userInfo.html_url}>🕸{userInfo.html_url}🕸</St.UserUrl>
         <St.UserInfoBox>
           <St.Followers>
             <St.FollowersTitle>Followers</St.FollowersTitle>
-            <St.FollowersText>56</St.FollowersText>
+            <St.FollowersText>{userInfo.followers}</St.FollowersText>
           </St.Followers>
           <St.Followings>
             <St.FollowingsTitle>Followings</St.FollowingsTitle>
-            <St.FollowingsText>56</St.FollowingsText>
+            <St.FollowingsText>{userInfo.following}</St.FollowingsText>
           </St.Followings>
           <St.Stars>
             <St.StarsTitle>Stars</St.StarsTitle>
-            <St.StarsText>56</St.StarsText>
+            <St.StarsText>{userStar.length}</St.StarsText>
           </St.Stars>
         </St.UserInfoBox>
         <St.BtnContainer>
-          <St.GoRepoBtn>Go Repository</St.GoRepoBtn>
+          <St.GoRepoBtn href={userInfo.repos_url[0].html_url}>
+            Go Repository
+          </St.GoRepoBtn>
         </St.BtnContainer>
       </St.ContentsBox>
     </St.ContentsContainer>
