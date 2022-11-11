@@ -3,14 +3,15 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Contents() {
   const location = useLocation();
+  const navigate = useNavigate();
   const { data } = location.state;
   const userInfo = data[0];
   const userStar = data[1];
-  const navigate = useNavigate();
 
   function closeContents() {
     navigate(-1);
   }
+
   return (
     <St.ContentsContainer>
       <St.ContentsBox>

@@ -10,6 +10,7 @@ const SearchBarContainer = styled.section`
 const SearchBar = styled.div`
   height: 3rem;
   width: 40%;
+
   background-color: white;
 
   border-radius: 2rem;
@@ -26,12 +27,13 @@ const SearchIcon = styled.img`
 `;
 
 const SearchInput = styled.input`
-  border: none;
   height: 2rem;
+  width: 80%;
 
   font-size: 1rem;
 
-  width: 80%;
+  border: none;
+
   margin-left: 0.5rem;
 
   :focus {
@@ -40,8 +42,9 @@ const SearchInput = styled.input`
 `;
 
 const HistoryBox = styled.ul`
-  background-color: white;
   width: 35%;
+
+  background-color: white;
 
   margin: 0;
   padding: 0;
@@ -49,23 +52,30 @@ const HistoryBox = styled.ul`
   border: solid 0.1rem lightgray;
   border-top: none;
 `;
+
 const ListContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   border-top: solid 0.1rem lightgray;
 `;
 
 const HistoryList = styled.li`
   height: 2rem;
+
   list-style: none;
+
   padding: 0.5rem 0 0 1rem;
 `;
 
 const HistoryDelete = styled.button`
-  background-color: transparent;
   height: 60%;
+
+  background-color: transparent;
+
   border: none;
+
   color: gray;
 `;
 

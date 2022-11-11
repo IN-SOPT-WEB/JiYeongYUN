@@ -10,6 +10,7 @@ const TitleContainer = styled.section`
 
 const TitleText = styled.h1`
   margin: 0;
+
   font-size: 4rem;
   color: white;
 `;

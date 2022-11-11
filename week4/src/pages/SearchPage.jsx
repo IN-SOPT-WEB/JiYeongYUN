@@ -11,19 +11,19 @@ function App() {
   const [data, setData] = useState(null);
   const [searchHistory, setSearchHistory] = useState(new Set());
   const [isFocused, setIsFocused] = useState(false);
+  const historyTarget = useRef(null);
+
   const navigate = useNavigate();
+
   function changeFocus() {
     setIsFocused(true);
   }
-
-  const historyTarget = useRef(null);
 
   async function getData(e) {
     if (e.type === "keydown" && e.key === "Enter") {
       const infoData = await getUserInfo(e.target.value);
       const starData = await getUserStar(e.target.value);
       setData([infoData, starData]);
-
       addHistory(e.target.value);
       navigate(`:${e.target.value}`, {
         state: {
