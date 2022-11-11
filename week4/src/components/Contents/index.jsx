@@ -1,9 +1,17 @@
 import St from "./style";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
-export default function Contents({ data }) {
+export default function Contents() {
+  const location = useLocation();
+  const { data } = location.state;
   const userInfo = data[0];
   const userStar = data[1];
+  const navigate = useNavigate();
 
+  function closeContents() {
+    navigate("/search");
+  }
   return (
     <St.ContentsContainer>
       <St.ContentsBox>
@@ -31,6 +39,7 @@ export default function Contents({ data }) {
             Go Repository
           </St.GoRepoBtn>
         </St.BtnContainer>
+        <St.closeBtn onClick={closeContents}>X</St.closeBtn>
       </St.ContentsBox>
     </St.ContentsContainer>
   );
