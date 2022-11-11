@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import gitLogo from "../../images/github.png";
 
 const ContentsContainer = styled.section`
   display: flex;
