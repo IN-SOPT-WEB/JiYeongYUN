@@ -1,6 +1,5 @@
 import St from "./style";
 import searchIcon from "../../images/loupe.png";
-import { useState } from "react";
 
 export default function Search(props) {
   const {
@@ -10,6 +9,7 @@ export default function Search(props) {
     isFocused,
     changeFocus,
     historyTarget,
+    deleteHistory,
   } = props;
 
   return (
@@ -25,12 +25,20 @@ export default function Search(props) {
       {isFocused && (
         <St.HistoryBox>
           {[...searchHistory].map((item, index) => (
-            <St.HistoryList
-              ref={historyTarget}
-              onClick={getHistoryData}
-              key={index}>
-              {item}
-            </St.HistoryList>
+            <St.ListContainer>
+              <St.HistoryList
+                ref={historyTarget}
+                onClick={getHistoryData}
+                key={index}>
+                {item}
+              </St.HistoryList>
+              <St.HistoryDelete
+                onClick={() => {
+                  deleteHistory(item);
+                }}>
+                X
+              </St.HistoryDelete>
+            </St.ListContainer>
           ))}
         </St.HistoryBox>
       )}
