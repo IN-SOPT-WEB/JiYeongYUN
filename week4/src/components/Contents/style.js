@@ -129,7 +129,7 @@ const GoRepoBtn = styled.a`
   text-decoration: none;
 `;
 
-const closeBtn = styled.button`
+const CloseBtn = styled.button`
   background-color: antiquewhite;
 `;
 const St = {
@@ -150,7 +150,7 @@ const St = {
   StarsText,
   BtnContainer,
   GoRepoBtn,
-  closeBtn,
+  CloseBtn,
 };
 
 export default St;
