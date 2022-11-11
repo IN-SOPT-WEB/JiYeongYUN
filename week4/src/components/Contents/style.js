@@ -129,6 +129,10 @@ const GoRepoBtn = styled.a`
 
   text-decoration: none;
 `;
+
+const closeBtn = styled.button`
+  background-color: antiquewhite;
+`;
 const St = {
   ContentsContainer,
   ContentsBox,
@@ -147,6 +151,7 @@ const St = {
   StarsText,
   BtnContainer,
   GoRepoBtn,
+  closeBtn,
 };
 
 export default St;

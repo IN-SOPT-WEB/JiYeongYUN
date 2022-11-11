@@ -49,13 +49,24 @@ const HistoryBox = styled.ul`
   border: solid 0.1rem lightgray;
   border-top: none;
 `;
+const ListContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid 0.1rem lightgray;
+`;
 
 const HistoryList = styled.li`
   height: 2rem;
   list-style: none;
   padding: 0.5rem 0 0 1rem;
+`;
 
-  border-top: solid 0.1rem lightgray;
+const HistoryDelete = styled.button`
+  background-color: transparent;
+  height: 60%;
+  border: none;
+  color: gray;
 `;
 
 const St = {
@@ -64,7 +75,9 @@ const St = {
   SearchIcon,
   SearchInput,
   HistoryBox,
+  ListContainer,
   HistoryList,
+  HistoryDelete,
 };
 
 export default St;
