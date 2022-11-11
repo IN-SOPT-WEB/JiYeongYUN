@@ -9,7 +9,7 @@ export default function Contents() {
   const navigate = useNavigate();
 
   function closeContents() {
-    navigate("/search");
+    navigate(-1);
   }
   return (
     <St.ContentsContainer>
@@ -38,7 +38,7 @@ export default function Contents() {
             Go Repository
           </St.GoRepoBtn>
         </St.BtnContainer>
-        <St.closeBtn onClick={closeContents}>X</St.closeBtn>
+        <St.CloseBtn onClick={closeContents}>X</St.CloseBtn>
       </St.ContentsBox>
     </St.ContentsContainer>
   );
